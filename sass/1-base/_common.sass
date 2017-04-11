@@ -1,0 +1,34 @@
+// COMMON
+
+body
+  font-family: $lucida-grande
+  font-size: $base-size
+  background: $pink
+
+.brand
+  +hide-text
+  +retina-image("../img/logo", 256px 100px)
+  background-position: center
+  background-repeat: no-repeat
+  height: 56px
+  margin: $gutter auto
+
+h2
+  font-size: $base-size * 1.8
+  font-weight: normal
+  text-align: center
+
+h3
+  @extend h2
+  color: white
+  padding: 10px 0
+  background: tint($blue,10%)
+  font-size: $base-size * 1.4
+  text-transform: uppercase
+
+section
+  +clearfix()  
+
+footer
+  text-align: center
+  color: lighten($pink, 15%)

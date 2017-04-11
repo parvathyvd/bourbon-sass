@@ -1,0 +1,52 @@
+// BOX
+
+.box
+  +size(280px 100px)
+  float: left
+  background: shade($teal, 30%)
+  color: white
+  border: solid 1px shade($teal, 20%)
+  box-sizing: border-box
+  text-align: center
+  line-height: 100px
+  margin: 0 $gutter 0 0
+
+
+  &:last-child
+    margin-right: 0
+
+  &:hover
+    +animation(wow 0.5s $ease-in-out-quint 2)
+    height: 110px
+    transition: height 2s
+
++keyframes(wow)
+  0%
+    +transform(scale(1))
+  50%
+    +transform(scale(2) rotate(-6deg))
+  100%
+    +transform(scale(1))
+
+.circleElement
+  +size(100% 300px)
+  padding: $gutter
+  border-radius: 20px
+  background-color: $teal
+  margin: 0 10px
+  float: left
+  +ellipsis(40%)
+  p
+    color: white
+    font-size: 14px
+
+.circle
+  +size(200px 200px)
+  border: solid 10px tint($pink, 10%)
+  background-color: tint($pink, 50%)
+  border-radius: 100%
+  margin: auto
+
+
+  &:hover
+    +animation(wow 0.5s $ease-in-circ 1)
