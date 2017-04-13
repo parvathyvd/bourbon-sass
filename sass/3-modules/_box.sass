@@ -1,52 +1,50 @@
-// BOX
 
-.box
-  +size(280px 100px)
-  float: left
-  background: shade($teal, 30%)
+//Box SAAS//
+
+#boxes
+  +grid-container(12 60px)
+
+  .box1
+    +grid-column(4)
+    background-color: purple
+    padding: 50px 10px
+    +keyframes(fadeIn)
+      from
+        +transform(scale(0))
+      to
+        +transform(scale(1))
+    +animation(fadeIn 3.0s ease-in, slide 2.0s ease)
+
+
+  .box2
+    +grid-shift(3)
+    +grid-column(5)
+    background-color: purple
+    padding: 50px 0px
+    +keyframes(mine)
+      from
+        background-color: yellow
+      to
+        background-color: $purple
+    +animation(mine 3.0s linear, slide 2.0s ease)
+
+
+#boxes-1
+  +grid-container(12 30px)
   color: white
-  border: solid 1px shade($teal, 20%)
-  box-sizing: border-box
-  text-align: center
-  line-height: 100px
-  margin: 0 $gutter 0 0
 
 
-  &:last-child
-    margin-right: 0
+  .box1-1
+    +grid-column(3)
+    background-color: $dark-purple
+    padding: 5px 10px
 
-  &:hover
-    +animation(wow 0.5s $ease-in-out-quint 2)
-    height: 110px
-    transition: height 2s
+  .box2-1
+    +grid-column(4)
+    background-color: $purple
+    padding: 5px 10px
 
-+keyframes(wow)
-  0%
-    +transform(scale(1))
-  50%
-    +transform(scale(2) rotate(-6deg))
-  100%
-    +transform(scale(1))
-
-.circleElement
-  +size(100% 300px)
-  padding: $gutter
-  border-radius: 20px
-  background-color: $teal
-  margin: 0 10px
-  float: left
-  +ellipsis(40%)
-  p
-    color: white
-    font-size: 14px
-
-.circle
-  +size(200px 200px)
-  border: solid 10px tint($pink, 10%)
-  background-color: tint($pink, 50%)
-  border-radius: 100%
-  margin: auto
-
-
-  &:hover
-    +animation(wow 0.5s $ease-in-circ 1)
+  .box3-1
+    +grid-column(4)
+    background-color: $light-purple
+    padding: 5px 10px

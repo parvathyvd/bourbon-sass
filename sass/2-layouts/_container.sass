@@ -2,6 +2,15 @@
 
 header
   text-align: center
+  +grid-container
+
+  .first-half-header
+    +grid-column(6)
+
+  nav
+    +grid-column(6)
+    position: relative
+    top: -10px
 
 .container
   padding: $gutter
@@ -9,8 +18,26 @@ header
   margin: $gutter auto
   box-sizing: border-box
   background: white
-  +cascade($pink)
+  +cascade($purple)
+
 
 article
-  +columns(3 200px)
-  +column-gap($gutter)   
+  +grid-container
+  padding: 10px
+  border: 1px solid purple
+  border-radius: 20px
+
+  .example1
+    +grid-column(6)
+  .example2
+    +grid-column(6)
+
+#more-elements
+  +grid-container
+
+  .element1
+    +grid-column(5)
+
+  .element2
+    +grid-shift(1)
+    +grid-column(5)
